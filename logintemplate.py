@@ -9,7 +9,7 @@ import requests
 def postErrorToSlack():
     bot_id = os.environ['slack_bot_id']
     channel_id = os.environ['slack_channel_id']
-    text = "test post"
+    text = "A login load test failed."
     slack_url = "https://slack.com/api/chat.postMessage"
     post_data = {'token':bot_id, 'channel':channel_id, 'text':text}
     post_response = requests.post(url=slack_url, data=post_data)
