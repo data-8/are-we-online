@@ -1,2 +1,4 @@
 .env
 ghostdriver.log
+login_user_*_test.py
+*.pyc
