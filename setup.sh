@@ -30,4 +30,4 @@ echo "export slack_bot_id='$slackbotid'" >> .env
 echo "export slack_channel_id='$slackchannelid'" >> .env
 
 cd ..
-cd cron.hourly
+echo y | cd cron.hourly

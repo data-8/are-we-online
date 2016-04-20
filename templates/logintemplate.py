@@ -6,7 +6,7 @@ import os
 import time
 import requests
 
-def postErrorToSlack():
+def failure():
     bot_id = os.environ['slack_bot_id']
     channel_id = os.environ['slack_channel_id']
     text = "A login load test failed."
@@ -30,7 +30,7 @@ def loginTest():
         WebDriverWait(driver, 10).until(EC.title_contains("Home"))
         assert True
     except:
-        postErrorToSlack()
+        failure()
         assert False
     driver.quit()
 

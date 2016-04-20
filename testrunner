@@ -1,3 +1,11 @@
-python generate_login_tests.py
+git pull origin master
+
+for generatorfile in generators/generate_*_tests.py
+do python $generatorfile
+done
+
+cd tests
 nosetests --processes=100
-rm -rf login_user_*_test.py
+cd ..
+
+rm -rf tests/*_test.py
